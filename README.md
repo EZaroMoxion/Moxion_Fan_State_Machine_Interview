@@ -1,5 +1,5 @@
 # Introduction
-MoxionPower has a lot of cooling fans in our system. Your task today is to implement a controller for one of our fans. We value correct and well tested code at MoxionPower. We hope that you would feel comfortable using your solution in our production codebase.
+MoxionPower Systems Engineering has created new requirements around power saving for the Fan Controller System. Your task today will be to design a state machine for the Fan Controller that will fulfill the new requirements. 
 
 # System Overview
 ## Sensor Power Enable
