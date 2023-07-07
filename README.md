@@ -14,7 +14,7 @@ First there is a GPIO enable line that controls a relay powering the fans. When 
 ## Fan Control PWM Duty Cycle
 When power is provided to the fans they will start turning. The speed the fans turn at is determined by the duty cycle of the provided PWM signal. Control of this signal code is provided via the `PwmOutputInterface& fan_output_raw` object.
 
-# Requirements
+# Existing Requirements
 1. The controller shall enable sensor power prior to using temperature measurements for fan control and wait 5 seconds before considering a temperature measurement valid.
 2. The controller shall enable the fan control relay when the temperature measurement is above 60C.
 3. The controller shall disable the fan control relay when the temperature measurement is below 50C.
@@ -27,6 +27,7 @@ When power is provided to the fans they will start turning. The speed the fans t
 | 130-140         | = 90                 |
 | > 140           | = 100                |
 
+# New Requirements
 5. The controller shall implement a power saving mode where sensor power is disabled if the temperature measurement is less than 20C for more than 1 minute.
 6. The controller shall periodically renable sensor power to measure the temperature every 10 minutes if it has been disabled when in this power saving mode.
 7. The controller shall exit power saving mode when the measured temperature exceeds 25C during a periodic sample period.
